@@ -46,28 +46,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.8852459">
+              <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
               <folding>
-                <element signature="e#982#1000#0" expanded="true" />
-                <element signature="e#1138#1156#0" expanded="true" />
-                <element signature="e#1278#1296#0" expanded="true" />
-                <element signature="e#1489#1507#0" expanded="true" />
-                <element signature="e#1872#1890#0" expanded="true" />
-                <element signature="e#2030#2048#0" expanded="true" />
-                <element signature="e#2191#2209#0" expanded="true" />
-                <element signature="e#2350#2368#0" expanded="true" />
-                <element signature="e#2511#2529#0" expanded="true" />
-                <element signature="e#2670#2688#0" expanded="true" />
                 <element signature="e#2829#2847#0" expanded="true" />
-                <element signature="e#2990#3008#0" expanded="true" />
-                <element signature="e#3147#3165#0" expanded="true" />
-                <element signature="e#3310#3328#0" expanded="true" />
-                <element signature="e#3479#3497#0" expanded="true" />
-                <element signature="e#4556#4595#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalendarActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalendarActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/utase1/letsmeet/activity/CalendarActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5">
-              <caret line="308" column="48" selection-start-line="308" selection-start-column="48" selection-end-line="308" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="308" column="62" selection-start-line="308" selection-start-column="62" selection-end-line="308" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -2009,31 +1994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
-          <folding>
-            <element signature="e#982#1000#0" expanded="true" />
-            <element signature="e#1138#1156#0" expanded="true" />
-            <element signature="e#1278#1296#0" expanded="true" />
-            <element signature="e#1489#1507#0" expanded="true" />
-            <element signature="e#1872#1890#0" expanded="true" />
-            <element signature="e#2030#2048#0" expanded="true" />
-            <element signature="e#2191#2209#0" expanded="true" />
-            <element signature="e#2350#2368#0" expanded="true" />
-            <element signature="e#2511#2529#0" expanded="true" />
-            <element signature="e#2670#2688#0" expanded="true" />
-            <element signature="e#2829#2847#0" expanded="true" />
-            <element signature="e#2990#3008#0" expanded="true" />
-            <element signature="e#3147#3165#0" expanded="true" />
-            <element signature="e#3310#3328#0" expanded="true" />
-            <element signature="e#3479#3497#0" expanded="true" />
-            <element signature="e#4556#4595#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/app/Instrumentation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8356941">
@@ -2050,14 +2010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/utase1/letsmeet/activity/MyCustomReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/utase1/letsmeet/activity/RespondMeeting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2068,9 +2020,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/utase1/letsmeet/activity/CalendarActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5">
-          <caret line="308" column="48" selection-start-line="308" selection-start-column="48" selection-end-line="308" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="308" column="62" selection-start-line="308" selection-start-column="62" selection-end-line="308" selection-end-column="62" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/utase1/letsmeet/activity/MyCustomReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8852459">
+          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+          <folding>
+            <element signature="e#2829#2847#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
