@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.parse.Parse;
 
 public class AppController extends Application {
 
@@ -20,6 +21,7 @@ public class AppController extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Parse.initialize(this, "xH3XIr6QzfCpqSsEbSl2Cb8URfaQnXuOa8s8cZhU", "9RLVZNilFpAUuqAL3KEOX37lkQBUCMVDCr6jquGG");
         mInstance = this;
     }
 
