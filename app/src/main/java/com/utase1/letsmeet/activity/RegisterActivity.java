@@ -44,7 +44,7 @@ public class RegisterActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        Parse.initialize(this, "9zuUcK5u0Y52bsW7Fi3vwb6HR02C8ndbXrV8Optw", "g3nutlveBqiKoUw683UOxfiwLtKEmmeFHDfpli02");
+        //Parse.initialize(this, "9zuUcK5u0Y52bsW7Fi3vwb6HR02C8ndbXrV8Optw", "g3nutlveBqiKoUw683UOxfiwLtKEmmeFHDfpli02");
 
         inputFullName = (EditText) findViewById(R.id.name);
         inputEmail = (EditText) findViewById(R.id.email);
