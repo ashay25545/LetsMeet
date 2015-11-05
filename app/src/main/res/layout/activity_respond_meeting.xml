@@ -14,7 +14,7 @@
         android:gravity="center_horizontal"
         android:id="@+id/meet_summ"
         android:layout_centerHorizontal="true"
-        android:background="#f3f3f3"
+        android:textColor="@color/white"
         />
 
     <TextView android:layout_width="fill_parent"
@@ -24,9 +24,9 @@
         android:layout_below="@+id/meet_summ"
         android:layout_alignTop="@+id/meet_summ"
         android:layout_marginTop="40dp"
-
         android:layout_alignEnd="@+id/meet_summ"
-        android:background="#f3f3f3"/>
+        android:textColor="@color/white"
+        />
 
     <!-- -Time and Date Addition-->
     <TextView
@@ -37,25 +37,23 @@
         android:layout_marginTop="55dp"
         android:editable="true"
         android:hint="Add from Time"
-        android:background="#f3f3f3"
         android:gravity="center_horizontal"
-
         android:textSize="25dp"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/radioSex"
+        android:layout_alignParentEnd="true"
+        android:textColorHint="@color/input_login_hint"/>
     <TextView
 
         android:id="@+id/meeting_timeto"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
         android:editable="true"
         android:hint="Add To Time"
-        android:background="#f3f3f3"
         android:gravity="center_horizontal"
         android:textSize="25dp"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/button_respond"
+        android:layout_alignParentStart="true"
+        android:textColorHint="@color/input_login_hint"/>
 
 
 
@@ -67,20 +65,20 @@
         android:textSize="25sp" android:textStyle="bold"
         android:id="@+id/textView4"
         android:layout_below="@+id/textView3"
-
         android:layout_alignEnd="@+id/textView3"
-        android:background="#f3f3f3"/>
+        android:textColor="@color/white"
+        />
 
-    <TextView android:layout_width="wrap_content"
+    <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="25sp" android:textStyle="bold"
         android:id="@+id/textView5"
         android:layout_below="@+id/textView4"
         android:layout_alignTop="@+id/textView4"
         android:layout_marginTop="40dp"
-
         android:layout_alignEnd="@+id/textView4"
-        android:background="#f3f3f3"/>
+        android:textColor="@color/white"
+        />
 
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -88,9 +86,9 @@
         android:textStyle="bold"
         android:id="@+id/textView6"
         android:layout_below="@+id/textView5"
-
+        android:textColor="@color/white"
         android:layout_alignEnd="@+id/textView5"
-        android:background="#f3f3f3"/>
+        />
 
 
     <Button
@@ -98,13 +96,12 @@
         android:layout_height="wrap_content"
         android:text="Respond"
         android:id="@+id/button_respond"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="95dp"
+        android:layout_marginBottom="60dp"
         android:gravity="center"
         android:onClick="respond_click"
-        android:background="@color/bg_main"/>
+        android:background="@color/bg_main"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
     <RadioGroup
         android:id="@+id/radioSex"
         android:layout_width="wrap_content"
@@ -132,12 +129,12 @@
             android:checked="false" />
     </RadioGroup>
 
-   <!-- <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:id="@+id/addTime"
-        android:layout_alignBottom="@+id/button_respond"
-        android:layout_alignParentEnd="true" />-->
+    <!-- <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Add"
+         android:id="@+id/addTime"
+         android:layout_alignBottom="@+id/button_respond"
+         android:layout_alignParentEnd="true" />-->
 
 </RelativeLayout>

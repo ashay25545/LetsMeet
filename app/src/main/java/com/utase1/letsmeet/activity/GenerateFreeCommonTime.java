@@ -15,15 +15,22 @@ import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.parse.ParseInstallation;
+import com.parse.ParsePush;
+import com.parse.ParseQuery;
 import com.utase1.letsmeet.R;
 import com.utase1.letsmeet.dto.ParticipantDetails;
 import com.utase1.letsmeet.dto.TimeParticipantMap;
 import com.utase1.letsmeet.dto.DataWrapper;
 
 
-import java.util.ArrayList;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 //import android.<span class="IL_AD" id="IL_AD6">graphics</span>.Color;
@@ -97,8 +104,15 @@ public class GenerateFreeCommonTime extends Activity {
                 int heightDp = (int) 120;
                 int widthDp = (int) 80;
                 TableRow.LayoutParams bLp = new TableRow.LayoutParams(widthDp,heightDp);
-                schedule.setLayoutParams(bLp);
+                schedule.setOnClickListener(new View.OnClickListener() {
 
+                    public void onClick(View view)
+                    {
+                        pushDataNotification(freeParticipants.get(schedule
+                                .getId()).getParticipantDetails());
+                    }
+
+                });
                 tl.addView(tr, new TableLayout.LayoutParams(
                         TableRow.LayoutParams.MATCH_PARENT,
                         TableRow.LayoutParams.WRAP_CONTENT));
@@ -146,17 +160,64 @@ public class GenerateFreeCommonTime extends Activity {
         }
     }
 
+    private void pushDataNotification(ArrayList<ParticipantDetails> participantDetails) {
+        StringBuilder users=null;
+        for(ParticipantDetails participantDetails1:participantDetails)
+        {
+            users=new StringBuilder();
+            users.append(participantDetails1.getParticipantName() + ",");
+
+        }
+        String[] userLists = users.toString().split(",");
+
+        ParsePush push = new ParsePush();
+        ParseQuery query = ParseInstallation.getQuery();
+
+        // Notification for Android users
+        query.whereEqualTo("deviceType", "android");
+
+        query.whereContainedIn("username", Arrays.asList(userLists));
+
+        push.setQuery(query);
+        JSONObject obj;
+        try {
+            obj = new JSONObject();
+            obj.put("alert", getIntent().getExtras().getString("MeetName"));
+            obj.put("action", "com.utase1.letsmeet.activity.UPDATE_STATUS");
+            obj.put("MeetName", "Java");
+            obj.put("MeetDate", "");
+            obj.put("MeetTime", "");
+            obj.put("MeetLocation", "");
+            obj.put("EventorMeeting", "Meeting");
+            obj.put("customdata", "" + " time" + "" + "time " + "location");
+            push.setData(obj);
+        }
+        catch (JSONException e)
+        {
+
+        }
+
+        push.sendInBackground();
+        Intent i = new Intent(getApplicationContext(),
+                MeetingCreated.class);
+
+
+        startActivity(i);
+        finish();
+
+    }
+
     private void addTimeValue(TimeParticipantMap freeParticipant) {
         tr = new TableRow(this);
         timeslot = new TextView(this);
-        if (freeParticipant.getTimeSlot() > 12)
+        if (freeParticipant.getTimeSlot()+1 > 12)
         {
-            timeslot.setText(freeParticipant.getTimeSlot() + "PM");
+            timeslot.setText(freeParticipant.getTimeSlot()+1 + "PM");
             timeslot.setTextColor(getResources().getColor(android.R.color.white));
         }
         else
         {
-            timeslot.setText(freeParticipant.getTimeSlot() + "AM");
+            timeslot.setText(freeParticipant.getTimeSlot() +1 + "AM");
             timeslot.setTextColor(getResources().getColor(android.R.color.white));
         }
 
