@@ -210,20 +210,20 @@ public class CreateMeeting extends AppCompatActivity implements GoogleApiClient.
             final Place place = places.get(0);
             CharSequence attributions = places.getAttributions();
 
-            mNameTextView.setText(Html.fromHtml(place.getName() + ""));
-            mAddressTextView.setText(Html.fromHtml(place.getAddress() + ""));
+            //mNameTextView.setText(Html.fromHtml(place.getName() + ""));
+            //mAddressTextView.setText(Html.fromHtml(place.getAddress() + ""));
             //mIdTextView.setText(Html.fromHtml(place.getId() + ""));
             //if(Html.fromHtml(place.getPhoneNumber() + "")!=null){
-                mPhoneTextView.setText(Html.fromHtml(place.getPhoneNumber() + ""));//}
+                //mPhoneTextView.setText(Html.fromHtml(place.getPhoneNumber() + ""));//}
             //else
-                mPhoneTextView.setText("No Phone to display");
+                //mPhoneTextView.setText("No Phone to display");
             //if(Html.fromHtml(place.getWebsiteUri()+"")!=null){
-                mWebTextView.setText(place.getWebsiteUri() + "");//}
+                //mWebTextView.setText(place.getWebsiteUri() + "");//}
            // else
                 //mWebTextView.setText("No website to display");
-            if (attributions != null) {
-                mAttTextView.setText(Html.fromHtml(attributions.toString()));
-            }
+            //if (attributions != null) {
+                //mAttTextView.setText(Html.fromHtml(attributions.toString()));
+            //}
         }
 
     };
