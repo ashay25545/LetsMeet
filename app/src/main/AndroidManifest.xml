@@ -83,6 +83,9 @@
             android:label="@string/app_name"
             android:launchMode="singleTop" />
 
+        <activity android:name=".activity.CalendarActivity" >
+        </activity>
+
         <service android:name="com.parse.PushService" />
 
         <receiver android:name="com.parse.ParseBroadcastReceiver" >
