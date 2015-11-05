@@ -21,6 +21,7 @@
         android:layout_marginTop="45dp"
         android:id="@+id/event_name"
         android:inputType="text"
+        android:textColor="#ffffff"
         android:textColorHint="@color/white"/>
 
 
@@ -33,6 +34,7 @@
         android:layout_below="@id/event_name"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:textColor="#ffffff"
         android:textColorHint="@color/white"/>
 
 
@@ -45,6 +47,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/autoCompleteTextView"
+        android:textColor="#ffffff"
         android:layout_marginTop="20dp"/>
 
     <!-- This displays the address of the place-->
@@ -55,6 +58,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/name"
+        android:textColor="#ffffff"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         android:scrollbarAlwaysDrawVerticalTrack="true"/>
 
@@ -64,6 +68,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
         android:layout_alignParentStart="true"
 
         android:layout_below="@+id/address"/>
@@ -75,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
         android:layout_below="@+id/place_id"
         android:autoLink="phone"/>
     <!-- If a website is available-->
@@ -86,7 +92,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/phone"
         android:autoLink="web"
-        android:textColor="@color/bg_register"/>
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/att"
@@ -103,7 +109,7 @@
         android:text="Date"
         android:id="@+id/event_date"
         android:editable="true"
-        android:textColor="#A9A9A9"
+        android:textColor="#ffffff"
         android:textSize="25dp"
 
 
@@ -116,7 +122,7 @@
         android:text="Add Time"
         android:id="@+id/event_time"
         android:editable="true"
-        android:textColor="#A9A9A9"
+        android:textColor="#ffffff"
         android:textSize="25dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/event_date" />
@@ -128,6 +134,7 @@
         android:inputType="textMultiLine"
         android:paddingStart="5dp"
         android:id="@+id/participants"
+        android:textColor="#ffffff"
         android:layout_below="@+id/event_time"
         android:layout_alignParentStart="true"
         android:textColorHint="@color/white"/>
