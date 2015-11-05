@@ -22,6 +22,7 @@
         android:id="@+id/meeting_name"
         android:layout_below="@+id/textView2"
         android:inputType="text"
+        android:textColor="#ffffff"
         android:textColorHint="@color/white"/>
 
     <AutoCompleteTextView
@@ -29,6 +30,7 @@
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:hint="Meeting Location"
+        android:textColor="#ffffff"
         android:layout_below="@id/meeting_name"
         android:textColorHint="@color/white"
         />
@@ -41,6 +43,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/autoCompleteTextView"
         android:layout_marginTop="20dp"/>
@@ -51,6 +54,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/name"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
@@ -63,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
         android:foreground="@color/bg_register"
         android:layout_below="@+id/address"/>
 
@@ -72,6 +77,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/place_id"
         android:autoLink="phone"/>
@@ -81,6 +87,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/phone"
         android:autoLink="web"/>
@@ -90,6 +97,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/web"
+        android:textColor="#ffffff"
         android:autoLink="web"
         android:layout_alignParentEnd="true" />
 
@@ -97,10 +105,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dip"
+        android:textColor="#ffffff"
         android:text="Date"
         android:id="@+id/meeting_date"
         android:editable="true"
-        android:textColor="#A9A9A9"
         android:textSize="25dp"
         android:layout_below="@id/att"/>
 
@@ -110,7 +118,7 @@
         android:text="From"
         android:id="@+id/meeting_timefrom"
         android:editable="true"
-        android:textColor="#A9A9A9"
+        android:textColor="#ffffff"
         android:textSize="25dp"
         android:layout_below="@+id/meeting_date" />
 
@@ -120,7 +128,7 @@
         android:text="To"
         android:id="@+id/meeting_timeto"
         android:editable="true"
-        android:textColor="#A9A9A9"
+        android:textColor="#ffffff"
         android:textSize="25dp"
         android:layout_alignBottom="@+id/meeting_timefrom"
         android:layout_alignEnd="@+id/textView2" />
@@ -142,6 +150,7 @@
         android:inputType="textMultiLine"
         android:paddingStart="5dp"
         android:id="@+id/participants"
+        android:textColor="#ffffff"
         android:layout_below="@+id/meeting_timefrom"
         android:layout_alignParentStart="true"
         android:textColorHint="@color/white"/>

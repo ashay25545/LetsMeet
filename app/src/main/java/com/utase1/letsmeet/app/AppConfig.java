@@ -21,4 +21,7 @@ public class AppConfig {
 
     //Server get user meetings
     public static String URL_GETMEETING = "http://omega.uta.edu/~axr1662/getmeetings.php";
+
+    //Server put final event response
+    public static String URL_GETEVENT = "http://omega.uta.edu/~axr1662/getevent.php";
 }
