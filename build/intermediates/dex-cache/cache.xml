@@ -2,6 +2,20 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.20.0\d3e66209ae9e749b2d6833761e7885f60f285564\google-api-client-1.20.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d3e66209ae9e749b2d6833761e7885f60f285564">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-api-client-1.20.0-79da242f6514a8da8c709458d8efba159fd1265b.jar" />
+    </item>
+    <item
+        jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-2bdd996f1f25454c2e24059735e15f950b19fbec.jar" />
+    </item>
+    <item
         jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -9,11 +23,25 @@
         <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-07489833d051ee3a30673b2900cd86f3915ccf8e.jar" />
     </item>
     <item
+        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\13.0\381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7\guava-jdk5-13.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\guava-jdk5-13.0-3ff499b2f3d5187cc1e2916ba71164febd3ed77c.jar" />
+    </item>
+    <item
         jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
         <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-4eac604c888759daa5685b34a07edfd262ba0e1a.jar" />
+    </item>
+    <item
+        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\jsr305-1.3.9-51d616e84c7e0914a4562325b81f818a390a1773.jar" />
     </item>
     <item
         jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.20.0\2408070b2abec043624d35b35e30450f1b663858\google-http-client-jackson2-1.20.0.jar"
@@ -35,6 +63,20 @@
         revision="23.0.1"
         sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
         <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-b9008e13c446ff4c6251610a88def3aebf5a4a57.jar" />
+    </item>
+    <item
+        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.20.0\1d086ac5756475ddf451af2e2df6e288d18608ca\google-oauth-client-1.20.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1d086ac5756475ddf451af2e2df6e288d18608ca">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-oauth-client-1.20.0-c7a7ed8789203d07a9a665fd63e5c726a5d234c2.jar" />
+    </item>
+    <item
+        jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\libs\bolts-android-1.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.1-58e131809bc62b683d1d0a07735ac773716fcfc2.jar" />
     </item>
     <item
         jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\libs\Parse-1.9.1.jar"
@@ -65,74 +107,18 @@
         <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-api-client-android-1.20.0-cdfb60aa93f913725a74b251f8599da238e45889.jar" />
     </item>
     <item
-        jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-a87e1b7cb962e98ddbe2d89782772fbbd1b57eb6.jar" />
-    </item>
-    <item
-        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-calendar\v3-rev125-1.20.0\fef496f895ad5be86416863153d4efbf7b601f8a\google-api-services-calendar-v3-rev125-1.20.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="fef496f895ad5be86416863153d4efbf7b601f8a">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-api-services-calendar-v3-rev125-1.20.0-e4893d7b4278ffd61ac67779234da1fb8293bdf2.jar" />
-    </item>
-    <item
-        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.20.0\93d82db2bca534960253f43424b2ba9d7638b4d2\google-http-client-1.20.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="93d82db2bca534960253f43424b2ba9d7638b4d2">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-http-client-1.20.0-e91f85e538d1b2848cf5ec0f6042135a31df79ec.jar" />
-    </item>
-    <item
-        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.20.0\d3e66209ae9e749b2d6833761e7885f60f285564\google-api-client-1.20.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d3e66209ae9e749b2d6833761e7885f60f285564">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-api-client-1.20.0-79da242f6514a8da8c709458d8efba159fd1265b.jar" />
-    </item>
-    <item
-        jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-2bdd996f1f25454c2e24059735e15f950b19fbec.jar" />
-    </item>
-    <item
-        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\13.0\381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7\guava-jdk5-13.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\guava-jdk5-13.0-3ff499b2f3d5187cc1e2916ba71164febd3ed77c.jar" />
-    </item>
-    <item
-        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\jsr305-1.3.9-51d616e84c7e0914a4562325b81f818a390a1773.jar" />
-    </item>
-    <item
-        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.20.0\1d086ac5756475ddf451af2e2df6e288d18608ca\google-oauth-client-1.20.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1d086ac5756475ddf451af2e2df6e288d18608ca">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-oauth-client-1.20.0-c7a7ed8789203d07a9a665fd63e5c726a5d234c2.jar" />
-    </item>
-    <item
-        jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\libs\bolts-android-1.2.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
-        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.1-58e131809bc62b683d1d0a07735ac773716fcfc2.jar" />
-    </item>
-    <item
         jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
         <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\jackson-core-2.1.3-bbd6e97b04b23a56f74a4856a60d9ae663821adc.jar" />
+    </item>
+    <item
+        jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-a87e1b7cb962e98ddbe2d89782772fbbd1b57eb6.jar" />
     </item>
     <item
         jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
@@ -142,11 +128,25 @@
         <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-b0a40cbd1994d5763b8e198422d1cad04a35fe06.jar" />
     </item>
     <item
+        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-calendar\v3-rev125-1.20.0\fef496f895ad5be86416863153d4efbf7b601f8a\google-api-services-calendar-v3-rev125-1.20.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="fef496f895ad5be86416863153d4efbf7b601f8a">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-api-services-calendar-v3-rev125-1.20.0-e4893d7b4278ffd61ac67779234da1fb8293bdf2.jar" />
+    </item>
+    <item
         jar="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="3aed37c38c56679602255dd72ef356da5d327cda">
         <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\classes-2354f1c19fb6787e31685f1525ac77967cf43b7b.jar" />
+    </item>
+    <item
+        jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.20.0\93d82db2bca534960253f43424b2ba9d7638b4d2\google-http-client-1.20.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="93d82db2bca534960253f43424b2ba9d7638b4d2">
+        <dex dex="C:\Users\akilesh\Documents\GitHub\LetsMeet\app\build\intermediates\pre-dexed\debug\google-http-client-1.20.0-e91f85e538d1b2848cf5ec0f6042135a31df79ec.jar" />
     </item>
     <item
         jar="C:\Users\akilesh\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.20.0\313dc99a7963523871495897ca11aa8472b3c6fd\google-http-client-android-1.20.0.jar"
