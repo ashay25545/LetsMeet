@@ -11,8 +11,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.format.DateUtils;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -27,17 +33,24 @@ import com.google.api.client.util.ExponentialBackOff;
 import com.google.api.services.calendar.CalendarScopes;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.Events;
+import com.utase1.letsmeet.app.AppConfig;
+import com.utase1.letsmeet.app.AppController;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CalendarActivity extends Activity {
     GoogleAccountCredential mCredential;
-
+    private static final String TAG = RegisterActivity.class.getSimpleName();
     ProgressDialog mProgress, mPlayServ, mCancelled, mError, mAccUnSpec, mNoNetwork;
 
     static final int REQUEST_ACCOUNT_PICKER = 1000;
@@ -48,9 +61,10 @@ public class CalendarActivity extends Activity {
 
     static SimpleDateFormat parseFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
     static SimpleDateFormat gettime = new SimpleDateFormat("HH");
-    static SimpleDateFormat getdate = new SimpleDateFormat("MM-dd-yyyy");
+    static SimpleDateFormat getdate = new SimpleDateFormat("MM-d-yyyy");
 
     String MeetDate, Mail, Meetname;
+    private ProgressDialog pDialog;
     /**
      * Create the main activity.
      * @param savedInstanceState previously saved instance data.
@@ -58,9 +72,9 @@ public class CalendarActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MeetDate = getIntent().getExtras().getString("MeetDate");
-        Mail = getIntent().getExtras().getString("Mail");
-        Meetname = getIntent().getExtras().getString("MeetName");
+        MeetDate = getIntent().getExtras().getString("MeetDate").toString();
+        Mail = getIntent().getExtras().getString("Mail").toString();
+        Meetname = getIntent().getExtras().getString("MeetName").toString();
 
         mProgress = new ProgressDialog(this);
         mPlayServ = new ProgressDialog(this);
@@ -68,6 +82,8 @@ public class CalendarActivity extends Activity {
         mProgress = new ProgressDialog(this);
         mError = new ProgressDialog(this);
 
+        pDialog = new ProgressDialog(this);
+        pDialog.setCancelable(false);
 
         // Initialize credentials and service object.
         SharedPreferences settings = getPreferences(Context.MODE_PRIVATE);
@@ -275,7 +291,10 @@ public class CalendarActivity extends Activity {
                         start_date = parseFormat.parse(start.toString());
                         end_date = parseFormat.parse(end.toString());
 
-                        if(MeetDate.equals(getdate.format(start_date))) {
+                        String mt = getdate.format(getdate.parse(MeetDate));
+                        String sd = getdate.format(start_date);
+
+                        if(sd.equals(mt)) {
                             eventStrings.add(String.format("%s,%s,%s", getdate.format(start_date), gettime.format(start_date), gettime.format(end_date)));
                         }
                     }catch(Exception e){
@@ -300,14 +319,16 @@ public class CalendarActivity extends Activity {
             if (output == null || output.size() == 0) {
 
             } else {
-                String[] opData = output.toString().split(",");
-                RespondMeeting regCalData = new RespondMeeting();
-                regCalData.registerFreeUserTime(Meetname,opData[1],opData[2],Mail);
-                Intent myIntent = new Intent(CalendarActivity.this, MainActivity.class);
-                //myIntent.putExtra("output", TextUtils.join("\n", output));
-                myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                CalendarActivity.this.startActivity(myIntent);
+                for (int i = 0; i < output.size(); i++)
+                {
+                    String opData = output.get(i);
+                    String[] opList = opData.toString().split(",");
+                    registerFreeCalTime(Meetname, opList[1], opList[2], Mail);
+                }
             }
+            Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+            //myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(myIntent);
         }
 
         @Override
@@ -330,5 +351,81 @@ public class CalendarActivity extends Activity {
                 mCancelled.setMessage("Request cancelled.");
             }
         }
+    }
+
+    public void registerFreeCalTime(final String meetName,final String fromTime,final String toTime,final String email) {
+
+        // Tag used to cancel the request
+        final String tag_string_req = "req_login";
+        pDialog.setMessage("Processing...");
+        showDialog();
+
+        StringRequest strReq = new StringRequest(Request.Method.POST,
+                AppConfig.URL_USERTIME, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.d(TAG, "User Time Response: " + response);
+                hideDialog();
+
+                try {
+                    JSONObject jObj = new JSONObject(response);
+                    boolean error = jObj.getBoolean("error");
+
+                    // Check for error node in json
+                    if (!error) {
+                        // user successfully logged in
+                        // Create login session
+                        //Toast.makeText(getApplicationContext(), "Processing Completed", Toast.LENGTH_LONG).show();
+                    } else {
+                        // Error in login. Get the error message
+                        String errorMsg = jObj.getString("error_msg");
+                        //Toast.makeText(getApplicationContext(),errorMsg, Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    // JSON error
+                    e.printStackTrace();
+                    //Toast.makeText(getApplicationContext(), "Json error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e(TAG, "Entry Error: " + error.getMessage());
+                //Toast.makeText(getApplicationContext(),error.getMessage(), Toast.LENGTH_LONG).show();
+                hideDialog();
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+                // Posting parameters to login url
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("emailId", email);
+                params.put("meetingName", meetName);
+                params.put("startTime",fromTime);
+                params.put("endTime",toTime);
+
+                return params;
+            }
+
+        };
+
+        // Adding request to request queue
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+
+
+    }
+
+    private void showDialog() {
+        if (!pDialog.isShowing())
+            pDialog.show();
+    }
+
+    private void hideDialog() {
+        if (pDialog.isShowing())
+            pDialog.dismiss();
     }
 }
