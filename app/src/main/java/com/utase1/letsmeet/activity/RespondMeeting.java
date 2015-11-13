@@ -118,11 +118,11 @@ public class RespondMeeting extends AppCompatActivity  implements NumberPicker.O
                 if (isChecked) {
                     txtTimefrom.setVisibility(View.GONE);
                     txtTimeto.setVisibility(View.GONE);
-                    Intent calIntent = new Intent(RespondMeeting.this,CalendarActivity.class);
+                    Intent calIntent = new Intent(getApplicationContext(),CalendarActivity.class);
                     calIntent.putExtra("MeetName",getIntent().getExtras().getString("MeetName"));
                     calIntent.putExtra("Mail",txtEmail);
                     calIntent.putExtra("MeetDate",getIntent().getExtras().getString("MeetDate"));
-                    RespondMeeting.this.startActivity(calIntent);
+                    startActivity(calIntent);
                 }
 
             }
@@ -140,8 +140,8 @@ public class RespondMeeting extends AppCompatActivity  implements NumberPicker.O
 
 
 
-    btnRespondMeet = (Button) findViewById(R.id.button_respond);
-       // addTime = (Button) findViewById(R.id.addTime);
+        btnRespondMeet = (Button) findViewById(R.id.button_respond);
+        // addTime = (Button) findViewById(R.id.addTime);
 
         _meetName.setText(getIntent().getExtras().getString("MeetName"));
         _meetDate.setText(getIntent().getExtras().getString("MeetDate"));
@@ -237,8 +237,7 @@ public class RespondMeeting extends AppCompatActivity  implements NumberPicker.O
 
     }
 
-    private void addListenerOnTime() {
-        tvDisplayTimeFrom = (TextView) findViewById(R.id.meeting_timefrom);
+    private void addListenerOnTime() { tvDisplayTimeFrom = (TextView) findViewById(R.id.meeting_timefrom);
         tvDisplayTimeFrom.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -251,13 +250,13 @@ public class RespondMeeting extends AppCompatActivity  implements NumberPicker.O
                 final NumberPicker np = (NumberPicker) d.findViewById(R.id.numberPicker1);
                 np.setMaxValue(24);
                 np.setMinValue(1);
-                np.setWrapSelectorWheel(false);
+                np.setWrapSelectorWheel(true);
                 np.setOnValueChangedListener(RespondMeeting.this);
                 set.setOnClickListener(new View.OnClickListener()
                 {
                     @Override
                     public void onClick(View v) {
-                        tv.setText(String.valueOf(np.getValue()));
+                        tvDisplayTimeFrom.setText(String.valueOf(np.getValue()));
                         d.dismiss();
                     }
                 });
@@ -278,8 +277,32 @@ public class RespondMeeting extends AppCompatActivity  implements NumberPicker.O
 
             @Override
             public void onClick(View v) {
-
-                showDialog(TIME_DIALOG_ID_TO);
+                final Dialog d = new Dialog(RespondMeeting.this);
+                d.setTitle("Add Time");
+                d.setContentView(R.layout.dialog);
+                Button set = (Button) d.findViewById(R.id.set);
+                Button cancel = (Button) d.findViewById(R.id.cancel);
+                final NumberPicker np = (NumberPicker) d.findViewById(R.id.numberPicker1);
+                np.setMaxValue(24);
+                np.setMinValue(1);
+                np.setWrapSelectorWheel(true);
+                np.setOnValueChangedListener(RespondMeeting.this);
+                set.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v) {
+                        tvDisplayTimeTo.setText(String.valueOf(np.getValue()));
+                        d.dismiss();
+                    }
+                });
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        d.dismiss();
+                    }
+                });
+                d.show();
+                //showDialog(TIME_DIALOG_ID_FROM);
 
             }
 

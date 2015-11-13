@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/bg_register"
+    tools:context="${relativePackage}.${activityClass}">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="You Are In Tab 2"
-        android:id="@+id/textView"
+        android:text="No Pending Invites"
+        android:id="@+id/empty"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/bg_register"/>
+        android:textColor="@color/bg_register" />
+
+    <ListView
+        android:id="@+id/lstPending"
+        android:cacheColorHint="#CCBBFFFF"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:background="@color/white"
+        android:divider="@color/bg_register"
+        android:dividerHeight="2.0sp">
+
+    </ListView>
 
 </RelativeLayout>

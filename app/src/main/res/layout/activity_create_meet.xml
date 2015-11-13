@@ -23,7 +23,7 @@
         android:layout_below="@+id/textView2"
         android:inputType="text"
         android:textColor="#ffffff"
-        android:textColorHint="@color/white"/>
+        android:textColorHint="@color/input_login_hint"/>
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView"
@@ -32,7 +32,7 @@
         android:hint="Meeting Location"
         android:textColor="#ffffff"
         android:layout_below="@id/meeting_name"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/input_login_hint"
         />
 
 
@@ -153,7 +153,7 @@
         android:textColor="#ffffff"
         android:layout_below="@+id/meeting_timefrom"
         android:layout_alignParentStart="true"
-        android:textColorHint="@color/white"/>
+        android:textColorHint="@color/input_login_hint"/>
 
 
 
